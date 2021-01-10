@@ -1,0 +1,433 @@
+/* =================================================== */
+/* 共通css */
+/* =================================================== */
+body{
+    margin:30px;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+*{
+    font-family: 'Dosis', sans-serif;
+    list-style: none;
+}
+p{
+    font-family: 'AP-OTF', serif;
+    font-size: 13px;
+    text-align: center;
+}
+@media (max-width:480px){
+    p{
+        font-size: 11px;
+    }
+}
+#top_page p{
+    margin-top: 0;
+}
+h1{
+    font-size: 31px;
+}
+h2{
+    font-size: 35px;
+}
+@media (max-width: 480px){
+    h1{
+        font-size: 21px;
+    }
+    h2{
+        font-size: 25px;
+    }
+}
+.work{
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+
+
+/* =================================================== */
+/* スプラッシュ */
+/* =================================================== */
+.fv_splash{
+    min-height: 100vh;
+    height: 100vh;
+    z-index: 1000;
+    background: #fff;
+    animation-name: omitsu_design;
+    animation-duration: 4.5s;
+    animation-fill-mode: forwards;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fv_splash video{
+    width: 100%;
+    height: 100%;
+}
+@keyframes omitsu_design {
+    0%{
+        opacity: 1;
+        width: 100%;
+    }
+    90%{
+        opacity: 1;
+        width: 100%;
+    }
+    100%{
+        opacity: 0;
+        width: 0;
+    }
+}
+
+
+
+/* =================================================== */
+/* FV枠線 */
+/* =================================================== */
+html:before{
+    height: 15px;
+    top:0;
+    right:0;
+    left:0;
+}
+html:after{
+    width: 15px;
+    top:0;
+    right:0;
+    bottom:0;
+}
+body:before{
+    height: 15px;
+    bottom:0;
+    right:0;
+    left:0;
+}
+body:after{
+    width: 15px;
+    bottom:0;
+    top:0;
+    left:0;
+}
+html:before,
+html:after,
+body:before,
+body:after{
+    content: "";
+    margin:0;
+    background: #de8d86;
+    position: fixed;
+    z-index: 999;
+}
+
+
+
+/* =================================================== */
+/* ナビゲーションメニュー .main_wrapper */
+/* =================================================== */
+.main_wrapper{
+    position: fixed;
+}
+.main_wrapper a {
+    position: relative;
+    text-decoration: none;
+    padding: 15px 0;
+}
+.main_wrapper a::after {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #333;
+    transform: scale(0, 1);
+    transform-origin: right top;
+    transition: transform .3s;
+}
+.main_wrapper a:hover::after {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+.main_wrapper div{
+    position: fixed;
+    padding: 20px;
+}
+.my_profile{
+    top: 50px;
+    left: 30px;
+}
+.my_design{
+    top:50px;
+    right:30px;
+}
+.my_flower{
+    bottom:50px;
+    left:30px;
+}
+.my_photo{
+    bottom: 50px;
+    right:30px;
+}
+
+
+
+/* =================================================== */
+/* トップページ */
+/* =================================================== */
+main{
+    min-height:500px;
+    width: 100%;
+    margin-top: 160px;
+}
+main h1,
+#flower_page h1,
+#graphic_page h1,
+#photos_page h1{
+    position: relative;
+}
+#top_page p{
+    text-align: left;
+}
+#top_page .my_name{
+    position: relative;
+}
+#top_page span img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 200px;
+    top: 42px;
+    transform: rotate(5deg);
+}
+@media(max-width:480px){
+    body{
+        background-position: inherit;
+    }
+    #top_page span img{
+        width: 120px;
+        top: 33px;
+        left: 140px;
+    }
+}
+.fv_img{
+    position: relative;
+}
+.fv_img img{
+    width: 600px;
+    height: auto;
+    position: absolute;
+    top:-80px;
+    right:34px;
+}
+
+
+
+/* =================================================== */
+/* 各子ページ */
+/* =================================================== */
+.page_top{
+    width: 230px;
+}
+@media(max-width:480px){
+    .page_top{
+        margin: 0 auto;
+    }
+}
+#flower_page span img,
+#graphic_page span img,
+#photos_page span img{
+    width: 200px;
+    height: auto;
+    position: absolute;
+    left: 150px;
+    top: -20px;
+    transform: rotate(5deg);
+}
+@media(max-width:480px){
+    #flower_page span img,
+    #graphic_page span img,
+    #photos_page span img{
+        width: 120px;
+        top: -2px;
+        left: 100px;
+    }
+}
+#flower_page .my_name,
+#graphic_page .my_name,
+#photos_page .my_name{
+    width: 380px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    position: relative;
+}
+#flower_page .my_name h1,
+#graphic_page .my_name h1,
+#photos_page .my_name h1{
+    margin: 0;
+    line-height: 53px;
+    margin-bottom: 30px;
+}
+#flower_page li,
+#graphic_page li,
+#photos_page li{
+    margin: 0 0 100px;
+}
+#flower_page img,
+#graphic_page img,
+#photos_page img{
+    width: 100%;
+    height: auto;
+}
+@media(max-width:480px){
+    #flower_page img,
+    #graphic_page img,
+    #photos_page img{
+        width: 50%;
+        height: auto;
+    }
+}
+#flower_page .fadeInUp,
+#graphic_page .fadeInUp,
+#photos_page .fadeInUp{
+    opacity: 0;
+    transform: translateY(100px);
+    transition: 1s;
+    position: absolute;
+}
+
+
+
+/* =================================================== */
+/* フラワーページ　グリッド #flower_grid*/
+/* =================================================== */
+html#flower_grid{
+    font-size: 62.5%;
+}
+#flower_grid *,
+#flower_grid *::after {
+    box-sizing: border-box;
+}
+#flower_grid .item {
+    width: 180px;
+    margin-bottom: 4px;
+    padding: 8px;
+    border-bottom: solid 3px;
+    border-radius: 5px;
+    background: #fff;
+}
+#flower_grid .item .image {
+    display: block;
+    width: 100%;
+}
+#flower_grid .item .category {
+    margin: 15px 9px 10px;
+    color: #aaa;
+    letter-spacing: 1px;
+}
+#flower_grid .item .category::before {
+    content: '';
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-right: 5px;
+    border: solid 2px;
+    border-radius: 50%;
+    vertical-align: -5px;
+}
+#flower_grid .description {
+    margin-right: 10px;
+    line-height: 1.5;
+}
+#flower_grid .item > a {
+    display: block;
+    margin: -8px -8px -11px;
+    padding: 8px 8px 11px;
+    border-radius: inherit;
+    color: #777;
+    transition: all .3s;
+}
+#flower_grid .item > a:hover {
+    box-shadow: 0 0 6px -1px rgba(0, 0, 0, .3);
+    opacity: .8;
+}
+
+#flower_grid .item_wedding,
+#flower_grid .item_wedding .category:before {
+    border-color: #ffc0cb;
+}
+#flower_grid .item_gift,
+#flower_grid .item_gift .category:before {
+    border-color: #76c047;
+}
+#flower_grid .item_yourself,
+#flower_grid .item_yourself .category:before {
+    border-color: #c1efff;
+}
+#flower_grid .item-m {
+    width: 364px;
+}
+#flower_grid .item-lg {
+    width: 732px;
+}
+#flower_grid .header {
+    padding: 25px 0;
+    border-bottom: none;
+    text-align: center;
+}
+#flower_grid .logo {
+    width: 100px;
+    height: auto;
+    transition: transform .3s;
+}
+#flower_grid .logo:hover {
+    transform: rotate(360deg);
+}
+#flower_grid .nav {
+    margin: 35px auto 10px;
+}
+#flower_grid .nav-item {
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+#flower_grid a {
+    display: inline-block;
+}
+#flower_grid a:after {
+    content: '';
+    display: block;
+    width: 0;
+    margin: 6px auto 0;
+    border-bottom: solid 1px #7c5119;
+    transition: width .3s ease-in-out;
+}
+#flower_grid .nav-item a:hover:after {
+    width: 100%;
+}
+#flower_grid .item > a:before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    left: 8px;
+    display: block;
+    height: 150PX;
+    background: rgba(0, 0, 0, 0.5);
+}
+#flower_grid .item-m > a::before {
+    height: 146px;
+}
